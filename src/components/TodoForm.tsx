@@ -29,6 +29,14 @@ export function TodoForm({ value, onChange, onSubmit }: TodoFormProps) {
       >
         Add Task
       </button>
+      <button
+        type="button"
+        onClick={() => onChange("")}
+        disabled={!value}
+        className="rounded-lg border border-slate-200 px-6 py-3 text-sm font-semibold text-slate-600 transition hover:border-slate-300 hover:text-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-400 disabled:cursor-not-allowed disabled:opacity-60"
+      >
+        Clear
+      </button>
     </form>
   );
 }
